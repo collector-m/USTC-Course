@@ -2,14 +2,12 @@
 import os.path
 
 HOST = 'https://raw.githubusercontent.com/'
-OWNER = 'USTC-Resource' #'USTC-Courses'  #'mbinary'#
+OWNER = 'USTC-Resource'  #'USTC-Courses'  #'mbinary'#
 REPO = 'USTC-Course'
 BRANCH = 'master'
-NAME = 'README.md' # index.html
+NAME = 'README.md'  # index.html
 
-
-PATH = os.path.join(HOST,OWNER,REPO,BRANCH)
-
+PATH = os.path.join(HOST, OWNER, REPO, BRANCH)
 
 WALKDIR = os.path.abspath('.')
 
@@ -17,32 +15,32 @@ TARDIR = 'docs'
 if not os.path.exists(TARDIR):
     TARDIR = 'docs'
 
-IGNORE = ['utils','docs','__pycache__','_config.yml']
+IGNORE = ['utils', 'docs', '__pycache__', '_config.yml']
 
-DOWNLOAD = 'http://downgit.zhoudaxiaa.com/#/home?url=https://github.com/'+OWNER+'/'+REPO+'/tree/'+BRANCH+'/'
+DOWNLOAD = 'http://downgit.zhoudaxiaa.com/#/home?url=https://github.com/' + OWNER + '/' + REPO + '/tree/' + BRANCH + '/'
 
 HTML = '''
-<!--
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title> 中国科学技术大学课程资源</title>
 </head>
--->
 # 中国科学技术大学课程资源
 
 <div>
   <h2>
-    <a href="../index.html">&nbsp;&nbsp;<i class="fa fa-level-up">back </i>&nbsp;&nbsp;</a>
+    <a href="../index.html">&nbsp;&nbsp;<i class="fas fa-backward"></i>&nbsp;</a>
     :/{cur}
   </h2>
 </div>
 
 ## 说明
 - 列表根据拼音排序
-- 点击链接下载二进制文件，或者打开文本文件(markdown 文件经过渲染)
-- <a href="{DOWNLOAD}" style="color:red;text-decoration:underline;" target="_black">下载当前文件夹</a>
+- 点击 Files 的链接下载二进制文件
+- 或者打开文本文件(markdown 文件经过渲染)
 
-## Directories
+<h2> Directories &nbsp; <a href="{DOWNLOAD}" style="color:red;text-decoration:underline;" target="_black"><i class="fas fa-download"></i></a></h2>
+
 <ul>{dirLst}</ul>
 
 ## Files
@@ -50,8 +48,8 @@ HTML = '''
 
 ---
 <div style="text-decration:underline;display:inline">
-  <a href="https://github.com/USTC-Resource/USTC-Course.git" target="_blank" rel="external"><i class="fa fa-github"></i>&nbsp; GitHub</a>
-  <a href="mailto:&#122;huheqin1@gmail?subject=反馈与建议" style="float:right" target="_blank" rel="external"><i class="fa fa-envelope"></i>&nbsp; Feedback</a>
+  <a href="https://github.com/USTC-Resource/USTC-Course.git" target="_blank" rel="external"><i class="fab fa-github"></i>&nbsp; GitHub</a>
+  <a href="mailto:&#122;huheqin1@gmail.com?subject=反馈与建议" style="float:right" target="_blank" rel="external"><i class="fas fa-envelope"></i>&nbsp; Feedback</a>
 </div>
 ---
 
@@ -60,7 +58,7 @@ HTML = '''
 
 #* 非zip, 非以'.'开头的文件多于 3 个的目录下都有个 zip 文件：`-DIRECTORY 目录下的\d+个文件.zip`,包含当前目录下的一些文件, 这样方便大家一键下载. (在 git commit前, 运行 `./before__commit.sh`可以自动生成)
 
-README=r'''
+README = r'''
 # 中国科学技术大学课程资源
 [![Stars](https://img.shields.io/github/stars/USTC-Resource/USTC-Course.svg?label=Stars&style=social)](https://github.com/USTC-Resource/USTC-Course/stargazers)
 [![Forks](https://img.shields.io/github/forks/USTC-Resource/USTC-Course.svg?label=Forks&style=social)](https://github.com/USTC-Resource/USTC-Course/network/members)
@@ -148,9 +146,10 @@ course
 {index}
 
 # 贡献投稿
-[这里是](https://github.com/USTC-Resource/USTC-Course/graphs/contributors) GitHub commit 贡献名单
-内容创作者包括：
+## [GitHub Commit](https://github.com/USTC-Resource/USTC-Course/graphs/contributors)
+[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/0)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/0)[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/1)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/1)[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/2)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/2)[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/3)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/3)[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/4)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/4)[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/5)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/5)[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/6)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/6)[![](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/images/7)](https://sourcerer.io/fame/mbinary/USTC-Resource/USTC-Course/links/7)
 
+## 内容创作者
 - mbinary
 - Lyncien
 - kingzevin
@@ -158,6 +157,7 @@ course
 - cclauss
 - 吴颖文
 - 童世炜
+- 熊家靖
 
 如果遗漏了你的名字，可自行 PR 或者联系贡献者。
 
@@ -195,4 +195,3 @@ git merge upstream/master
 -->
 
 '''
-
